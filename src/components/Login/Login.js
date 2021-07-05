@@ -88,9 +88,9 @@ const Login = () => {
     if (formIsValid) {
       ctx.onLogin(emailState.value, passwordState.value);
     } else if (!emailState.isValid) {
-      emailInputRef.current.activate();
+      emailInputRef.current.focus();
     } else {
-      passwordInputRef.current.activate();
+      passwordInputRef.current.focus();
     }
   };
 
@@ -119,7 +119,7 @@ const Login = () => {
         />
 
         <div className={classes.actions}>
-          <Button type='submit' className={classes.btn} >
+          <Button type='submit' className={classes.btn}>
             Login
           </Button>
         </div>
